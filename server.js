@@ -9,6 +9,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+//Conexión a public
+app.use(express.static(__dirname + '/public'));
+
 // Configuración de rutas globales.
 app.use( require('./servidor/routes/index'));
 
